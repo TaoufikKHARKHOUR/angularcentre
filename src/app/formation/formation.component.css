@@ -1,0 +1,56 @@
+.course {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   
+}
+.course h1 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.course strong {
+    color: #252020;
+    font-size: 16px;
+}
+
+.course p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 15px;
+}
+
+.course .duration {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.course .duration strong {
+    margin-right: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.course .duration span {
+    font-size: 14px;
+    color: #50484c; /* Une couleur bleue pour attirer l'attention */
+}
+.course:hover {
+    background-color: #eaf4fc; /* Light blue background on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    transform: scale(1.03); /* Slightly enlarges the div */
+}
+.courses-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer à une nouvelle ligne si les blocs ne tiennent pas */
+    gap: 20px; /* Espacement entre les blocs */
+    justify-content: center; /* Centrer les blocs horizontalement */
+    padding: 20px;
+    background-image: url('img.jpg');
+}

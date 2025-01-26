@@ -1,0 +1,14 @@
+
+.div-container{
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer à une nouvelle ligne si les blocs ne tiennent pas */
+    gap: 20px; /* Espacement entre les blocs */
+    justify-content: center; /* Centrer les blocs horizontalement */
+    padding: 20px;
+    background-image: url('img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    width:98%;
+    height: 900px;
+}
