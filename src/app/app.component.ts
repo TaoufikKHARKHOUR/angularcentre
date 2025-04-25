@@ -1,34 +1,21 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
-import { Router,RouterOutlet, RouterLink} from '@angular/router';
+import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { RouterModule} from '@angular/router';
+//import { provideHttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgFor, NgIf,RouterLink,RouterOutlet],
+  imports: [RouterModule],
+  //providers: [], 
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent{
+export class AppComponent implements OnInit {
   title = 'centre';
-  showFormationList: boolean = false;
-  formations: string[] = ['Développement Web', 'Développement Mobile', 'Data Science', 'Langues Étrangères', 'Cybersécurité'];
-  constructor(private router: Router) {}
-  navigateToFormation() {
-    this.router.navigate(['/formation']); // Navigate to '/formation' route
+  
+  constructor() { }
+  ngOnInit(): void {
+    // Initialization logic can go here
   }
-  showList(){
-    this.showFormationList = true;
-  }
-  hideList() {
-    this.showFormationList = false;
-  }
-  filteredFormations = [...this.formations];
-  searchTerm = '';
-  onSearch() {
-    this.filteredFormations = this.formations.filter((formation) =>
-      formation.toLowerCase().includes(this.searchTerm.toLowerCase())
-    );
-  }
-
 }

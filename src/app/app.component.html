@@ -1,24 +1,17 @@
 <header>
   <h1>Centre de Formation</h1>
-  
   <p>Informatique et Langues Étrangères</p>
 </header>
   <nav>
     <ul>
       <li><a routerLink="accueil" routerLinkActive="active">Accueil</a></li>
-      <li (mouseenter)='showList()' (mouseleave)='hideList()'>
-        <a routerLink="formation" routerLinkActive="active" >Formations</a>
-        <ul *ngIf="showFormationList" class="dropdown-menu">
-          <li *ngFor="let formation of formations"><a href="https://www.w3schools.com/angular/default.asp">{{ formation }}</a></li>
-        </ul>
-      </li>
+      <li><a routerLink="formation" routerLinkActive="active" >Formations</a></li>
       <li><a routerLink="services" routerLinkActive="active">Services</a></li>
       <li><a routerLink="contact" routerLinkActive="active">Contact</a></li>
       <li><a routerLink="propos" routerLinkActive="active">À propos</a></li>
-      <li class="search-container"><input type="text" placeholder="Recherchez" 
-        (input)="onSearch()"/><button (click)="onSearch()">rechercher
+      <li class="search-container"><input type="text" placeholder="Recherchez"/><button>rechercher
           <i class="fa fa-search"></i>
         </button></li>
     </ul>
   </nav>
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>

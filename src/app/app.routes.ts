@@ -1,14 +1,9 @@
-import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { FormationComponent } from './formation/formation.component';
-import { NgModule } from '@angular/core';
-import { AccueilComponent } from './accueil/accueil.component';
-import { ServicesComponent } from './services/services.component';
-import { ContactComponent } from './contact/contact.component';
-import { ProposComponent } from './propos/propos.component';
+import { Routes } from '@angular/router';
+
 export const routes: Routes = [
-  {path:'formation',component:FormationComponent},{path:'accueil',component:AccueilComponent},
-  {path:'services',component:ServicesComponent},{path:'contact',component:ContactComponent},{path:'propos',component:ProposComponent}
+  { path: 'accueil', loadComponent: () => import('./accueil/accueil.component').then(m => m.AccueilComponent) },
+  { path: 'formation', loadComponent: () => import('./formation/formation.component').then(m => m.FormationComponent) },
+  { path: 'services', loadComponent: () => import('./services/services.component').then(m => m.ServicesComponent) },
+  { path: 'contact', loadComponent: () => import('./contact/contact.component').then(m => m.ContactComponent) },
+  { path: 'propos', loadComponent: () => import('./propos/propos.component').then(m => m.ProposComponent) },
 ];
-export class AboutComponent {
-}

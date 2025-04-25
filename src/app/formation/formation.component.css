@@ -18,28 +18,55 @@
     color: #252020;
     font-size: 16px;
 }
-
 .course p {
-    font-size: 14px;
-    color: #666;
+    font-size: 20px;
+    color: #000000;
     margin: 5px 0 15px;
+    display: inline-block; /* S'assurer que tous les éléments sont sur la même ligne */
+    vertical-align: middle;
 }
+.spring-icon {
+    display: inline-block;
+    width: 24px; /* Si nécessaire, définissez la largeur */
+    height: 24px; /* Si nécessaire, définissez la hauteur */
+    color: #3dee10;
+  }
+  
 
 .course .duration {
     display: flex;
     align-items: center;
     margin-top: 10px;
 }
-
 .course .duration strong {
     margin-right: 5px;
     font-size: 16px;
     color: #333;
 }
-
 .course .duration span {
     font-size: 14px;
     color: #50484c; /* Une couleur bleue pour attirer l'attention */
+}
+.course .duration p{
+    background-color: #e98d24;
+}
+.course .btn-inscription {
+    background: linear-gradient(130deg, #1abc9c, #16a085);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+.course .btn-inscription:hover {
+    background: linear-gradient(135deg, #e74c3c, #f39c12);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 .course:hover {
     background-color: #eaf4fc; /* Light blue background on hover */
@@ -54,3 +81,36 @@
     padding: 20px;
     background-image: url('img.jpg');
 }
+.html{
+    font-size: 2rem; /* Increase the size of the icon */
+    color: #fc0909; /* Set the icon color to a beautiful blue */
+    transition: transform 0.3s ease, color 0.3s ease; /* Add a smooth transition for hover effects */
+  }
+  .css{
+    font-size: 2rem; /* Icon size */
+  color: #053afc; /* CSS3 color */
+  transition: transform 0.3s ease, color 0.3s ease;
+  }
+  .jss{
+    font-size: 2rem; /* Taille de l'icône */
+    color: #ebd10d; /* Couleur jaune de JavaScript */
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+.nodejs{
+    font-size:  2rem; 
+      color: #3dee10; 
+      transition: transform 0.3s ease, color 0.3s ease; 
+}
+.courses-container .course .react{
+    color: #59e3fc;
+    font-size: 2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+}
+  .svg {
+    line-height: middle; /* Default line height, can be adjusted */
+     vertical-align:middle; /* Ensures alignment with text */
+     display: inline-block;
+     margin-top: -10px; /* Adjust this value based on the icon's alignment */
+   }
+   .cls-1{fill:#01579b;}.cls-2{fill:#40c4ff;}.cls-3{fill:#29b6f6;}.cls-4{fill:#fff;}.cls-4,.cls-5,.cls-6{opacity:0.2;isolation:isolate;}.cls-5{fill:#263238;}.cls-6{fill:url(#radial-gradient);}
