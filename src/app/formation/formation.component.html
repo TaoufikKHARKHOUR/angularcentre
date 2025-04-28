@@ -1,4 +1,16 @@
 <div class="courses-container">
+    <div class="course" *ngFor="let formation of formations">
+        <h1>{{formation.domaine}}</h1>
+        <strong>compétence que vous gagnerez :</strong>
+        <p>{{formation.nomFormation}} <img src="http://localhost:8080/formation/{{formation.nomFormation}}/photo" alt="" class="foto"></p>
+        <div class="duration">
+            <strong>Durée :</strong><span>{{formation.durre}}</span>
+        </div>
+        <div class="duration">
+            <strong>Prérequis:</strong><span>{{formation.prerequis}}</span>
+        </div>
+        <button class="btn-inscription">S'inscrire</button>
+    </div>
     <div class="course">
         <h1>Developement Web Front-End</h1>
         <strong>compétence que vous gagnerez :</strong>

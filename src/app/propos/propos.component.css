@@ -1,0 +1,80 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #c47b1b;
+    padding: 20px;
+  }
+  
+  form {
+    background-color: #7be6cb;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="date"],
+  form input[type="file"],
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    transition: border-color 0.3s;
+  }
+  
+  form input[type="text"]:focus,
+  form input[type="number"]:focus,
+  form input[type="date"]:focus,
+  form input[type="file"]:focus,
+  form textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  .button-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .button-group button {
+    flex: 1;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button-group button[type="submit"] {
+    background-color: #006d77; /* Vert-bleu élégant */
+    color: white;
+  }
+  
+  .button-group button[type="submit"]:hover {
+    background-color: #005661;
+  }
+  
+  .button-group button[type="reset"] {
+    background-color: #ef476f; /* Rose rouge moderne */
+    color: white;
+  }
+  
+  .button-group button[type="reset"]:hover {
+    background-color: #d4355d;
+  }
+  
+  

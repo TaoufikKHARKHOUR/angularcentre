@@ -1,10 +1,12 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { HttpClient, HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { Component, Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
   
 })
+
+
 export class FormationService {
   formations:any
   backendUrl = 'http://localhost:8080/formation'; // Adjust the base URL as needed
