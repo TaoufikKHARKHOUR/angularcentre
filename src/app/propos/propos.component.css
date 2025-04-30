@@ -76,5 +76,13 @@ body {
   .button-group button[type="reset"]:hover {
     background-color: #d4355d;
   }
+  .message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+  }
   
   
