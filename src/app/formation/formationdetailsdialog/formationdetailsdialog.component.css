@@ -1,0 +1,56 @@
+.course {
+    background: #c3f1f3;
+    border-radius: 8px;
+    
+    width: 700px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.course h1 {
+    color: #000000;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+}
+.course .foto {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin-left: 20px;
+}
+.course strong {
+    color: #252020;
+    font-size: 16px;
+    margin-left: 20px;
+}
+.course p {
+    font-size: 20px;
+    color: #000000;
+    margin: 5px 0 15px;
+    display: inline-block; /* S'assurer que tous les éléments sont sur la même ligne */
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+  
+
+.course .duration {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.course .duration strong {
+    margin-right: 5px;
+    font-size: 16px;
+    color: #333;
+}
+.course .duration span {
+    font-size: 14px;
+    color: #50484c;
+    margin-left: 10px; /* Une couleur bleue pour attirer l'attention */
+}
+.course .duration p{
+    background-color: #e98d24;
+}

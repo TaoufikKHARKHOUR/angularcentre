@@ -1,0 +1,100 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 900px; /* Ajustez cette valeur selon accueil */
+    margin: 0 auto;
+    width: 100%;
+    background: #c3f1f3;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+    padding: 32px;
+     max-height: 700px; /* Ajustez la hauteur selon vos besoins */
+    overflow-y: auto;
+}
+form h2{
+    text-align: center;
+    color: #0a0a0a;
+    margin-bottom: 20px;
+}
+label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+textarea {
+    resize: none;
+    width: 100%;
+    min-height: 80px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+input,
+textarea,
+select {
+    padding: 10px 14px;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 8px;
+    background: #f8ffff;
+    font-size: 1rem;
+    color: #222;
+    transition: border-color 0.2s;
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #26c6da;
+    background: #e0f7fa;
+}
+button + button {
+    margin-left: 10px;
+}
+button {
+    padding: 12px 0;
+    background: linear-gradient(90deg, #26c6da 0%, #00bcd4 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 10px;
+}
+
+button:hover,
+button:focus {
+    background: linear-gradient(90deg, #00bcd4 0%, #26c6da 100%);
+    transform: translateY(-2px) scale(1.02);
+}
+form .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: 2px solid #d61e1e;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #d61e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+ form .close-btn:hover {
+  background: #d61e1e;
+  color: #fff;
+  border-color: #b31313;
+  transform: scale(1.1);
+}

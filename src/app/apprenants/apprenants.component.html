@@ -1,0 +1,27 @@
+<body>
+    <div class="apprenants-container">
+  <h2>Liste des Apprenants</h2>
+  <table class="apprenants-table">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Email</th>
+        <th>Téléphone</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let apprenant of apprenantss; let i = index">
+        <td>{{ apprenant.nom }}</td>
+        <td>{{ apprenant.prenom }}</td>
+        <td>{{ apprenant.email }}</td>
+        <td>{{ apprenant.telephone }}</td>
+        <td>
+          <button class="btn-supprimer" (click)="supprimerApprenant(i)">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>

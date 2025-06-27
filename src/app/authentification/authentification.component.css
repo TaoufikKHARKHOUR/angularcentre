@@ -1,0 +1,93 @@
+.auth-container {
+  max-width: 450px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  background: linear-gradient(to right, #75b9dd, #1e7aa8); /* Dégradé élégant */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  text-align: center;
+}
+.auth-page {
+  background-image: url("/assets/images/istockphoto-1366554092-612x612.jpg");
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-size: cover; /* Ajuste l'image pour couvrir toute la zone */
+  background-position: center; /* Centre l'image */
+  height: 100vh; /* Prend toute la hauteur de la fenêtre */
+}
+.auth-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2c3e50; /* Couleur sombre élégante */
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #34495e; /* Couleur légèrement sombre */
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9; /* Fond clair */
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #010911; /* Couleur de focus */
+  outline: none;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #0c6ace; /* Couleur principale */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3; /* Couleur au survol */
+  transform: translateY(-2px); /* Effet de survol */
+}
+
+.btn-submit:active {
+  transform: translateY(0); /* Effet de clic */
+}
+/* Pour le message d'erreur */
+.message1 {
+  color: #000000;
+  background: linear-gradient(90deg, #e53935 0%, #b71c1c 100%);
+  border: 1px solid #b71c1c;
+  border-radius: 6px;
+  padding: 12px 20px;
+  margin: 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(229, 57, 53, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.5px;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px);}
+  to { opacity: 1; transform: translateY(0);}
+}

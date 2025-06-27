@@ -1,0 +1,62 @@
+.apprenants-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fdfdfd;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+}
+
+.apprenants-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.apprenants-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+}
+
+.apprenants-table thead {
+  background-color: #00796b;
+  color: white;
+}
+
+.apprenants-table th, .apprenants-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.apprenants-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-supprimer {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-supprimer:hover {
+  background-color: #c0392b;
+}
+body{
+    background-image: url('/assets/images/rm373batch13-blogbanner-05.jpg');
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+   background-size: cover;/* Ajuste l'image pour couvrir toute la zone */
+  background-position: center; /* Centre l'image */
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 0; /* Supprime les marges internes */
+  min-height: 100vh; /* Définit une hauteur minimale de 100% de la hauteur de la fenêtre */
+  overflow-y: auto; /* Autorise le défilement vertical */
+}

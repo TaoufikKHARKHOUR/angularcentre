@@ -1,0 +1,63 @@
+<!-- DIALOG DE FORMULAIRE DE MODIFICATION -->
+
+  <div class="dialog-box">
+    <button class="close-btn" (click)="onCancel()">✕</button>
+    <h2>Modifier Formateur</h2>
+
+    <form>
+      
+    <div class="form-group">
+      <label>Prénom :</label>
+      <input type="text" name="prenom" [(ngModel)]="formateur.prenom"/>
+    </div>
+
+    <div class="form-group">
+      <label>Email :</label>
+      <input type="email" name="email" [(ngModel)]="formateur.email"/>
+    </div>
+
+    <div class="form-group">
+      <label>Téléphone :</label>
+      <input type="tel" name="telephone" [(ngModel)]="formateur.telephone" />
+    </div>
+
+    <div class="form-group">
+      <label>Mot de passe :</label>
+    <input
+        type="{{ showPassword ? 'text' : 'password' }}"
+        name="motdepasse"
+        required
+        [(ngModel)]="formateur.motdepasse"
+        style="padding-right: 2.5rem; width: 100%; box-sizing: border-box;"
+    />
+    <span
+        (click)="showPassword = !showPassword"
+        style="position: absolute; right: 30px; top: 53%; transform: translateY(-50%); cursor: pointer; font-size: 1.2em;"
+        title="{{ showPassword ? 'Masquer' : 'Afficher' }} le mot de passe"
+    >
+        {{ showPassword ? '👁️' : '🙈' }}
+    </span>
+    </div>
+
+    <div class="form-group">
+      <label>Spécialité :</label>
+      <input type="text" name="specialite" [(ngModel)]="formateur.specialite"/>
+    </div>
+
+    <div class="form-group">
+      <label>Date de naissance :</label>
+      <input type="date" name="datedenaissance" [(ngModel)]="formateur.datedenaissance"/>
+    </div>
+    <div class="form-group">
+      <label>Photo :</label>
+      <input type="file" name="photo" />
+    </div>
+     
+
+      <div class="dialog-actions">
+        <button type="submit" class="btn-modifier">Modifier</button>
+        <button type="reset" class="btn-effacer">Effacer</button>
+      </div>
+    </form>
+  </div>
+

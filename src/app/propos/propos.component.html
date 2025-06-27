@@ -1,5 +1,55 @@
-<form (submit)="onSubmit($event)" method="POST" enctype="multipart/form-data">
+    <div class="welcome-message">
+          <button class="deconnecter" (click)="navigue()">Se déconnecter</button>
 
+    Bienvenue  {{ formateur.nom }} {{ formateur.prenom }} ! Heureux de vous revoir sur votre espace formateur.
+<br><br><p>Voici vos formations</p></div>
+<table class="formations-table">
+    <thead>
+        <tr>
+            <th>Photo</th>
+            <th>Durée</th>
+            <th>Nom de la Formation</th>
+            <th>Description</th>
+            <th>Domaine</th>
+            <th>Objectif</th>
+            <th>Prérequis</th>
+            <th>Session</th>
+            <th>Niveau</th>
+            <th>Date de début</th>
+            <th>Date de fin</th>
+            
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let formation of formationdeformateur">
+            <td>
+                <img [src]="'http://localhost:8080/formation/' + formation.nomFormation + '/photo'" alt="" class="foto">
+            </td>
+            <td>{{ formation.durre }} heures</td>
+            <td>{{ formation.nomFormation }}</td>
+            <td>{{ formation.description }}</td>
+            <td>{{ formation.domaine }}</td>
+            <td>{{ formation.objectif }}</td>
+            <td>{{ formation.prerequis }}</td>
+            <td>{{ formation.session }}</td>
+            <td>{{ formation.niveau }}</td>
+            <td>{{ formation.datededebut }}</td>
+            <td>{{ formation.datedefin }}</td>
+            
+            <td>
+                <button class="bouton" (click)="opendialogmodifier(formation)">Modifier</button>
+                <button class="bouton" (click)="opendialogsupprimer(formation)">Supprimer</button>
+                <button class="bouton" (click)="listeapprenant(formation)">Apprenants</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+<div class="body">
+
+<form (submit)="onSubmit($event)" method="POST" enctype="multipart/form-data">
+    <h2>Ajouter une Formation</h2>
     <label for="durre">Durée :</label>
     <input type="number" id="durre" name="durre" required><br><br>
   
@@ -32,13 +82,17 @@
   
     <label for="photo">Photo :</label>
     <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
-  
+     <div *ngIf="message" class="message">
+          {{ message }}
+     </div>
+     <div *ngIf="message2" class="message2">
+         {{ message2 }}
+     </div>
     <div class="button-group">
         <button type="submit">Ajouter Formation</button>
         <button type="reset" class="clear-btn">Effacer</button>
     </div>
 </form>
-<div *ngIf="message" class="message">
-    {{ message }}
-  </div>
+</div>
+
   

@@ -15,7 +15,7 @@ body {
 }
 
 .form-container {
-  background-color: white;
+  background-color: #7fccd1;
   padding: 30px 40px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -83,8 +83,9 @@ body {
 }
 
 .close-btn:hover {
-  background: #ff4d4d;
-  color: #000000;
+  background: #d61e1e;
+  color: #fff;
+  border-color: #b31313;
   transform: scale(1.1);
 }
 

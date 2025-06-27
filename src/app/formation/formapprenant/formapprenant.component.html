@@ -1,41 +1,40 @@
 <div class="form-wrapper">
-  <form class="form-container" action="/apprenants" method="POST">
+  <form class="form-container" (ngSubmit)="onSubmit($event)" [formGroup]="inscriptionForm" method="POST">
     <button type="button" class="close-btn"  (click)="fermerFormulaire()">X</button>
 
     <h2>Inscription Apprenant</h2>
-
     <div class="form-group">
       <label for="nom">Nom</label>
-      <input type="text" id="nom" name="nom" required>
+      <input type="text" id="nom" name="nom" formControlName="nom" required>
     </div>
 
     <div class="form-group">
       <label for="prenom">Prénom</label>
-      <input type="text" id="prenom" name="prenom" required>
+      <input type="text" id="prenom" name="prenom" formControlName="prenom" required>
     </div>
 
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" formControlName="email" required>
     </div>
 
     <div class="form-group">
       <label for="telephone">Téléphone</label>
-      <input type="tel" id="telephone" name="telephone" required>
+      <input type="tel" id="telephone" name="telephone" formControlName="telephone" required>
     </div>
 
-    <div class="form-group">
+    <!--<div class="form-group">
       <label for="motdepasse">Mot de passe</label>
-      <input type="password" id="motdepasse" name="motdepasse" required>
-    </div>
+      <input type="password" id="motdepasse" name="motdepasse" formControlName="motdepasse" required>
+    </div>-->
 
     <div class="form-group">
       <label for="datedenaissance">Date de naissance</label>
-      <input type="date" id="datedenaissance" name="datedenaissance" required>
+      <input type="date" id="datedenaissance" name="datedenaissance" formControlName="datedenaissance" required>
     </div>
 
     <div class="form-actions">
-      <button type="submit" class="submit-btn">S'inscrire</button>
+      <button type="submit" class="submit-btn" >S'inscrire</button>
       <button type="button" class="submit-btn" (click)="fermerFormulaire()">Fermer</button>
     </div>
   </form>

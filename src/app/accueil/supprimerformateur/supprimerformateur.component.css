@@ -1,0 +1,96 @@
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.dialog-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px 25px;
+  width: 350px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+}
+
+.dialog-box h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+  color: #222;
+}
+
+.dialog-box p {
+  font-size: 1.1em;
+  margin: 15px 0 25px;
+  color: #555;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-oui {
+  background-color: #d90429;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.btn-oui:hover {
+  background-color: #b80324;
+}
+
+.btn-non {
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.btn-non:hover {
+  background-color: #ccc;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: 2px solid #d61e1e;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #d61e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #d61e1e;
+  color: #fff;
+  border-color: #b31313;
+  transform: scale(1.1);
+}

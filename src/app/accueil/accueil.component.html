@@ -1,1 +1,96 @@
-<div class="div-container"></div>
+
+<body>
+  <button class="deconnecter" (click)="navigue()">Se déconnecter</button>
+    <h2>Listes des Formateurs</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Photo</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Email</th>
+            <th>Téléphone</th>
+            <th>Mot De Passe</th>
+            <th>Spécialité</th>
+            <th>Date de Naissance</th>
+            <th>Supprimer</th>
+            <th>Modifier</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let formateur of formateurs">
+            <td>{{ formateur.id }}</td>
+            <td>
+                <img src="http://localhost:8080/formateur/{{formateur.prenom}}/photo" alt="Photo" width="60" height="60" style="object-fit:cover; border-radius:50%;">
+            </td>
+            <td>{{ formateur.nom }}</td>
+            <td>{{ formateur.prenom }}</td>
+            <td>{{ formateur.email }}</td>
+            <td>{{ formateur.telephone }}</td>
+            <td>{{ formateur.motdepasse  }}</td>
+            <td>{{ formateur.specialite }}</td>  
+            <td>{{ formateur.datedenaissance }}</td>
+            <td>
+                <button class="bouton"  (click)="deeleteFormateur(formateur)">Supprimer</button>
+            </td>
+            <td>
+                <button class="bouton" (click)="modifierformateur(formateur)">Modifier</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<form (submit)="onSubmit($event)"  method="POST" enctype="multipart/form-data" class="formateur-form">
+  <h2>Ajouter un Formateur</h2>
+
+  <div class="form-group">
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" required>
+  </div>
+
+  <div class="form-group">
+    <label for="prenom">Prénom :</label>
+    <input type="text" id="prenom" name="prenom" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="telephone">Téléphone :</label>
+    <input type="tel" id="telephone" name="telephone" required>
+  </div>
+
+  <div class="form-group">
+    <label for="motdepasse">Mot de passe :</label>
+    <input type="password" id="motdepasse" name="motdepasse" required>
+  </div>
+
+  <div class="form-group">
+    <label for="datedenaissance">Date de naissance :</label>
+    <input type="date" id="datedenaissance" name="datedenaissance" required>
+  </div>
+
+  <div class="form-group">
+    <label for="specialite">Spécialité :</label>
+    <input type="text" id="specialite" name="specialite" required>
+  </div>
+
+  <div class="form-group">
+    <label for="file">Photo de profil :</label>
+    <input type="file" id="file" name="file" accept="image/*" required onchange="previewImage(event)">
+    <div id="preview-container">
+      <img id="preview" src="#" alt="Aperçu photo" style="display: none;" />
+    </div>
+  </div>
+  <div *ngIf="message1" class="message1">{{message1}}</div>
+  <div *ngIf="message2" class="message2">{{message2}}</div>
+  <div class="form-group btn-group">
+    <button type="submit">Ajouter</button>
+    <button type="reset" class="reset-btn">Effacer</button>
+  </div>
+</form>
+
+</body>

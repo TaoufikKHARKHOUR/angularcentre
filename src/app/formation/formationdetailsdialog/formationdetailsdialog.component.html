@@ -1,0 +1,17 @@
+<div class="course">
+        <h1>{{data.formation.domaine}}</h1>
+        <strong>compétence que vous gagnerez :</strong><br>
+        <p>{{data.formation.nomFormation}} <img src="http://localhost:8080/formation/{{data.formation.nomFormation}}/photo" alt="" class="foto"></p>
+        <div class="duration">
+            <strong>Durée :</strong><span>{{data.formation.durre}} heure</span>
+        </div><br>
+        <div>
+            <strong>Niveau:</strong><span>{{data.formation.niveau}}</span><br><br>
+            <strong>Prérequis:</strong><span>{{data.formation.prerequis}}</span><br><br>
+            <strong>Objectif:</strong><span>{{data.formation.objectif}}</span><br><br>
+            <strong>Description:</strong><span>{{data.formation.description}}</span><br><br>
+            <strong>Session:</strong><span>{{data.formation.session}}</span><br><br>
+            <strong>Date de début:</strong><span>{{data.formation.datededebut}}</span><br><br>
+            <strong>Date de Fin:</strong><span>{{data.formation.datedefin}}</span>
+        </div>
+</div>

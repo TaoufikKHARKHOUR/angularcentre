@@ -8,26 +8,13 @@
     font-family: Arial, sans-serif;
     line-height: 1.6;
   }
+    
+   /* background-color: #0077b6;*/
 
-  header {
-    background-color: #0077b6;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-  }
 
-  header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-  }
-
-  header p {
-    font-size: 1.2em;
-  }
-
+  
   nav {
-    background-color: #023e8a;
+    background-color: #032f69;
     display: flex;
     justify-content: center;
     padding: 10px 0;
@@ -107,4 +94,192 @@
 }
 .search-container button:hover {
   background-color: #125fb1;
+}
+/* Section Héro */
+.hero-section {
+  background: linear-gradient(to right, #00263b, #004466);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  display: flex; /* Active Flexbox */
+  flex-direction: row; /* Aligne les enfants horizontalement */
+  justify-content: space-between; /* Ajoute de l'espace entre les deux div */
+  align-items: center; /* Aligne verticalement les éléments */
+  gap: 20px; /* Ajoute un espace entre les deux div */
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.cta-button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #00263b;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #e6b800;
+}
+
+/* Section avec les fonctionnalités */
+.features-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 60px 20px;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+.feature {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 300px;
+  flex: 1 1 280px;
+  text-align: center;
+}
+
+.feature h2 {
+  color: #004466;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+.features-section p {
+  font-size: 1.2rem; /* Légèrement plus grand pour améliorer la lisibilité */
+  color: #4d4d4d; /* Gris doux pour un texte agréable à lire */
+  line-height: 1.7; /* Espacement plus large entre les lignes */
+  font-family: 'Roboto', sans-serif; /* Police moderne et lisible */
+  font-weight: 400; /* Poids normal pour une lecture fluide */
+  margin: 15px 0; /* Un petit espace au-dessus et en dessous pour aérer le texte */
+  letter-spacing: 0.5px; /* Espacement léger pour une lecture plus fluide */
+  text-align: center; /* Centrer le texte pour une meilleure présentation */
+}
+
+.why-section {
+  background: #4fdff1; /* Bleu très clair */
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 4px solid #4a6cf7; /* Bleu vif pour marquer la section */
+}
+
+.why-section h2 {
+  font-size: 3.4rem;
+  color: #123080; /* Bleu foncé professionnel */
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+.why-section p {
+  font-size: 2rem;
+  max-width: 850px;
+  margin: 0 auto;
+  color: #200303; /* gris doux, moins dur que #333 */
+  line-height: 1.8;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+
+.why-section strong {
+  color: #4a6cf7; /* Accent sur le mot important */
+  font-weight: bold;
+}
+.domains {
+  margin-top: 25px;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.domains span {
+  background-color: #eaf4ff;
+  color: #005aaa;
+  padding: 15px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.3s ease;
+  flex: 1 1 40%;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  justify-content: right;
+  text-align: center;
+}
+
+.domains span:hover {
+  background-color: #d0e8ff;
+}
+.hero-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hero-content {
+  flex: 1 ;
+  text-align: left;
+}
+.foto {
+  width: 70px; /* Ajustez la largeur selon vos besoins */
+  height: auto; /* Maintient le ratio d'aspect de l'image */
+  display: block; /* Facultatif : pour s'assurer que l'image est un bloc */
+  margin: 0 auto; /* Facultatif : centre l'image horizontalement */
+}
+header {
+ /* display: flex;                  /* structure en ligne */
+ /* align-items: center;           /* centre verticalement */
+  background: linear-gradient(to right, #00263b, #1e739e);
+  color: rgb(247, 247, 247);
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+}
+
+.logofoto {
+  position: absolute;
+  left: 120px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 150px;
+  width: auto;
+   cursor: pointer;
+}
+
+.header-text {
+  text-align: center;
+  cursor: pointer;
+}
+
+.header-text h1 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+}
+
+.header-text p {
+  font-size: 1.2em;
 }

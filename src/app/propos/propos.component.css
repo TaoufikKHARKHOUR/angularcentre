@@ -2,17 +2,20 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #c47b1b;
     padding: 20px;
+    background-image: url("/app/propos/contexte-programmation-personne-travaillant-codes-ordinateur_23-2150010125.avif");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
   }
-  
   form {
-    background-color: #7be6cb;
+    background-color:  #61b7bd;
     max-width: 600px;
     margin: auto;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
-  
+  /**/
   form label {
     display: block;
     margin-bottom: 6px;
@@ -45,7 +48,13 @@ body {
   .button-group {
     display: flex;
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 24px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.13);
+    border-radius: 8px;
+    padding: 16px 0;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.06);
   }
   
   .button-group button {
@@ -76,13 +85,186 @@ body {
   .button-group button[type="reset"]:hover {
     background-color: #d4355d;
   }
-  .message {
+  form .message {
     margin-top: 20px;
     padding: 10px;
     background-color: #d4edda;
     color: #155724;
     border: 1px solid #c3e6cb;
     border-radius: 5px;
+    
   }
-  
+
+  form .message2 {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8d7da;
+    color: #9b0f1d;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    display: block;
+    word-break: break-word;
+    white-space: pre-line;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .welcome-message {
+    background-color: #b2dfdb;
+    color: #082647;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 2.2em;
+    margin-bottom: 0px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(21,101,192,0.08);
+    text-align: center;
+    position: relative;
+  }
+  .welcome-message .deconnecter {
+    position: absolute;
+    left: 24px;
+    top: 10%;
+    text-align: left;
+    padding: 10px 24px;
+  background: linear-gradient(90deg, #1267ac 0%, #5ac5f7 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(255, 88, 88, 0.12);
+  transition: background 0.3s, box-shadow 0.2s, color 0.3s;
+  outline: none;
+  }
+  .welcome-message .deconnecter:hover {
+    background: linear-gradient(90deg, #19598d 0%, #40b9f1 100%);
+    transform: scale(1.05);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(255, 88, 88, 0.12);
+  }
+  .welcome-message p{
+    background-color:  #b2dfdb;
+    color: #082f49;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 1.75em;
+    margin-bottom: 0px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(21,101,192,0.08);
+    text-align: center;
+  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px auto 0 auto;
+  background-color: #ffffffcc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  margin-top: 0px;
+}
+
+th, td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  background-color: #006d77;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+  background-color: #f6fafd;
+}
+
+tr:hover {
+  background-color: #e0f7fa;
+  transition: background-color 0.2s;
+}
+
+td {
+  color: #333;
+  font-size: 1em;
+}
+.foto {
+  display: block;
+  max-width: 80px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+  margin: 18px auto;
+  object-fit: cover;
+  border: 3px solid #006d77;
+}
+caption {
+  caption-side: top;
+  padding: 12px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #1565c0;
+}
+  /* Limite la largeur du tableau et ajoute un défilement horizontal si besoin */
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  /* Pour éviter que les cellules ne deviennent trop larges */
+  td, th {
+    max-width: 250px;
+    word-break: break-word;
+    white-space: pre-line;
+  }
+
+  /* Style for action buttons */
+  .bouton {
+    padding: 10px 20px;
+    margin: 0 6px;
+    border: 1.5px solid #006d77;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #e0f7fa 0%, #b2dfdb 100%);
+    color: #006d77;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 
+      background 0.3s cubic-bezier(.4,0,.2,1), 
+      color 0.3s cubic-bezier(.4,0,.2,1), 
+      box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,109,119,0.08);
+    outline: none;
+  }
+  .bouton:hover {
+    background: linear-gradient(90deg, #006d77 0%, #43bccd 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(0,109,119,0.15);
+    border-color: #43bccd;
+  }
+  h1{
+    text-align: center;
+    color: #0a0a0a;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  .body{
+    background-image: url("/assets/images/pngtree-website-technology-line-dark-background-image_2344719.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+.body form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0a0a0a;
+    font-size: 40px;
+    font-weight: bold;
+}
   

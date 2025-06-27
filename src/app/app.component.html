@@ -1,17 +1,61 @@
 <header>
-  <h1>Centre de Formation</h1>
-  <p>Informatique et Langues Étrangères</p>
-</header>
+  <img (click)="navigateToHome()" src="/assets/images/ChatGPT_Image_Jun_14__2025__07_50_01_PM-removebg-preview.png" alt="" class="logofoto">
+  <div class="header-text" (click)="navigateToHome()">
+     <h1>ITFormationLink</h1>
+  <p>Mettre en relation formateurs et apprenants IT</p>
+  </div>
+ </header>
   <nav>
     <ul>
-      <li><a routerLink="accueil" routerLinkActive="active">Accueil</a></li>
+      <!--<li><a routerLink="accueil" routerLinkActive="active">Accueil</a></li>-->
       <li><a routerLink="formation" routerLinkActive="active" >Formations</a></li>
-      <li><a routerLink="services" routerLinkActive="active">Services</a></li>
-      <li><a routerLink="contact" routerLinkActive="active">Contact</a></li>
-      <li><a routerLink="propos" routerLinkActive="active">À propos</a></li>
-      <li class="search-container"><input type="text" placeholder="Recherchez"/><button>rechercher
+      <li><a routerLink="formateurs" routerLinkActive="active">Nos Formateurs</a></li>
+      <!--<li><a routerLink="propos" routerLinkActive="active">Ajouter</a></li>-->
+      <!--<li class="search-container"><input type="text" placeholder="Recherchez"/><button>rechercher
           <i class="fa fa-search"></i>
-        </button></li>
+        </button></li>-->
+        <li><a routerLink="authentification" routerLinkActive="active">Authentification</a></li>
     </ul>
   </nav>
+  <section class="hero-section" *ngIf="!isFormationPage()">
+    <div class =hero-flex>
+      <div class="hero-content">
+        <h1>Votre Centre de Formations digitales pour booster votre avenir</h1>
+        <p>
+          Découvrez nos parcours adaptés au marché de l’emploi. Apprenez les compétences les plus demandées dans le numérique.
+        </p>
+        <button class="cta-button" (click)="navigateToFormation()">Découvrir les formations</button>
+      </div>
+      <div class="domains">
+        <span>Développement <br> <img src="assets/images/dev.png" alt="" class="foto"></span>
+        <span>Data & IA <br> <img src="assets/images/9544031.png" alt="" class="foto"> </span>
+        <span>Fonctionnel <br> <img src="assets/images/Maintenance-512.webp" alt="" class="foto"> </span>
+        <span>Cybersécurité <br> <img src="assets/images/cloud-protection.png" alt="" class="foto"> </span>
+      </div>
+    </div>
+  </section>
+  <section class="why-section" *ngIf="!isFormationPage()">
+    <h2>Pourquoi s’inscrire chez nous ?</h2>
+    <p>
+      Parce que nous facilitons votre accès aux meilleures formations IT en vous mettant directement en contact avec nos formateurs experts. Remplissez simplement le formulaire d’inscription, et un formateur vous contactera rapidement pour vous guider et répondre à toutes vos questions. C’est simple, rapide, et efficace !
+    </p>
+  </section>
+  
+  <section class="features-section" *ngIf="!isFormationPage()">
+    <div class="feature">
+      <h2>Formations 100% adaptées au marché du travail</h2>
+      <p>
+        Développez des compétences en forte demande et ouvrez-vous à de nouvelles opportunités.
+      </p>
+    </div>
+    
+    <div class="feature">
+      <h2>100% à distance</h2>
+      <p>Plus besoin de vous déplacer ! Grâce à notre système de mise en relation, vous pouvez accéder aux formations et entrer en contact avec des formateurs où que vous soyez. Apprenez à votre rythme, depuis chez vous, en toute flexibilité.</p>
+    </div>
+    <div class="feature">
+      <h2>Prise de contact directe</h2>
+      <p>Nos formateurs vous contactent rapidement après votre inscription pour vous orienter vers la formation la plus adaptée.</p>
+    </div>
+  </section>
 <router-outlet></router-outlet>

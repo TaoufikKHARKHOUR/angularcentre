@@ -1,0 +1,15 @@
+<div class="formateurs-page">
+    
+
+<div class="formateurs-container">
+  <div class="formateur-card" *ngFor="let formateur of formateurs">
+    <img src="http://localhost:8080/formateur/{{formateur.prenom}}/photo" alt="Photo de {{ formateur.nom }}" class="photo" />
+    <div class="infos">
+      <h2>{{ formateur.nom | uppercase }} {{ formateur.prenom.charAt(0).toUpperCase() + formateur.prenom.slice(1).toLowerCase() }}</h2>
+      <p><strong>Email :</strong> {{ formateur.email }}</p>
+      <p><strong>Téléphone :</strong> {{ formateur.telephone }}</p>
+      <p><strong>Spécialité :</strong> {{ formateur.specialite }}</p>
+    </div>
+  </div>
+</div>
+</div>

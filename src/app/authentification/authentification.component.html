@@ -1,0 +1,42 @@
+<div class="auth-page">
+  <div class="auth-container">
+  <h2>Authentification</h2>
+  <form (submit)="onSubmit($event)">
+    <div class="form-group">
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email"  required />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Mot de passe :</label>
+      <div style="position: relative;">
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          id="password"
+          name="password"
+          required
+          style="padding-right: 13px;"
+        />
+        <span
+          (click)="showPassword = !showPassword"
+          style="position: absolute; right: 0px; top: 50%; transform: translateY(-50%); cursor: pointer;"
+          title="{{ showPassword ? 'Masquer' : 'Afficher' }} le mot de passe"
+        >
+          {{ showPassword ? '👁️' : '🙈' }}
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="userType">Type d'utilisateur :</label>
+      <select id="userType" name="userType"  required>
+        <option value="formateur">Formateur</option>
+        <option value="admin">Admin</option>
+      </select>
+    </div>
+         <div *ngIf="message1" class="message1">{{message1}}</div>
+    <button type="submit" class="btn-submit"  (submit)="onSubmit($event)">Se connecter</button>
+  </form>
+  </div>
+</div>
+
